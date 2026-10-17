@@ -66,7 +66,13 @@ export const activities = [
   { name: 'Global Capstone Design Camp', description: { en: 'Collaborated with international students to solve real-world industry problems using technology.', th: 'ร่วมงานกับนักศึกษานานาชาติเพื่อใช้เทคโนโลยีแก้ปัญหาจริงในภาคอุตสาหกรรม' } },
 ];
 
-export const projects: { name: string; description?: Localized; url?: string }[] = [
+export const projects: {
+  name: string;
+  description?: Localized;
+  url?: string;
+  links?: { label: Localized; url: string }[];
+  demoAccount?: { username: string; password: string };
+}[] = [
   {
     name: 'BOI e-Visa',
     description: {
@@ -92,9 +98,13 @@ export const projects: { name: string; description?: Localized; url?: string }[]
   {
     name: 'Rental Demo',
     description: {
-      th: 'โปรเจกต์ทดลองระบบเช่าสินค้าและบริการ',
-      en: 'An experimental project for product and service rentals.',
+      th: 'โปรเจกต์ทดลองระบบเช่าสินค้าและบริการ มีทั้งหน้าสำหรับผู้ใช้งานและหน้าจัดการสำหรับ Admin',
+      en: 'An experimental product and service rental system with both a user-facing site and an admin interface.',
     },
-    url: 'https://rental-test-five.vercel.app/',
+    links: [
+      { label: { th: 'หน้าผู้ใช้งาน', en: 'User site' }, url: 'https://rental-test-five.vercel.app/' },
+      { label: { th: 'หน้า Admin', en: 'Admin login' }, url: 'https://rental-test-five.vercel.app/login' },
+    ],
+    demoAccount: { username: 'admin@rental.com', password: 'P@ssw0rd' },
   },
 ];

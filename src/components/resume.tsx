@@ -63,6 +63,19 @@ export default function Resume() {
               {t('ดูเว็บไซต์', 'Visit website')} <span aria-hidden="true">↗</span>
               <span className="sr-only">{t(' (เปิดในแท็บใหม่)', ' (opens in a new tab)')}</span>
             </a>}
+            {project.links && <div className="project-links">
+              {project.links.map(link => <a className="project-link" key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.label[language]} <span aria-hidden="true">↗</span>
+                <span className="sr-only">{t(' (เปิดในแท็บใหม่)', ' (opens in a new tab)')}</span>
+              </a>)}
+            </div>}
+            {project.demoAccount && <div className="demo-account">
+              <h4>{t('บัญชี Admin สำหรับทดลองใช้งาน', 'Demo admin account')}</h4>
+              <dl>
+                <div><dt>{t('ชื่อผู้ใช้', 'Username')}</dt><dd><code>{project.demoAccount.username}</code></dd></div>
+                <div><dt>{t('รหัสผ่าน', 'Password')}</dt><dd><code>{project.demoAccount.password}</code></dd></div>
+              </dl>
+            </div>}
           </article>)}
         </div>
       </section>
