@@ -69,7 +69,7 @@ npm run test:e2e
 
 - R2: ผู้ใช้ขอเพิ่ม BOI e-Visa สำหรับนักลงทุนชาวต่างชาติ พร้อมลิงก์ https://visa.boi.go.th/, LINE OA ของ Koala’s March และ Impact Family
 - เพิ่มส่วนโปรเจกต์ทั้งภาษาไทย/อังกฤษและเมนูนำทางให้เข้ากับธีมเดิม
-- Impact Family แสดงชื่อโปรเจกต์ตามที่แจ้ง เนื่องจากยังไม่มีรายละเอียดหรือลิงก์จากผู้ใช้
+- Koala’s March และ Impact Family เป็นระบบ CRM ที่เชื่อมต่อ LINE OA ตามข้อมูลเพิ่มเติมจากผู้ใช้
 - PDF ดาวน์โหลดคงเป็นไฟล์ต้นฉบับ ข้อมูลผลงานใหม่เพิ่มเฉพาะบนเว็บ
 - งาน push Git ก่อนหน้านี้ยังรอ URL repository และ branch จากผู้ใช้
 
@@ -83,3 +83,32 @@ npm run test:e2e
 - ปรับตำแหน่งในส่วนแนะนำตัวและ metadata ให้ตรงกับงานปัจจุบัน พร้อมคงประวัติ Full Stack เดิม
 - ใช้สถานะ current ของรายการงานเพื่อระบุงานปัจจุบันโดยตรง
 - PDF ดาวน์โหลดคงเป็นต้นฉบับ การเปลี่ยนแปลงนี้อยู่ในเนื้อหาเว็บ
+
+## สถานะเตรียม Vercel deployment (17 ตุลาคม 2026)
+
+- R2: เตรียม `.vercelignore` และเพิ่ม `.vercel/` ใน `.gitignore`
+- ตรวจพบ Git remote `https://github.com/Naruesorn141/bank-resume.git` branch `master`
+- เนื้อหาเวอร์ชันล่าสุดผ่าน lint, production build และ browser tests 4 กรณีแล้ว
+- ล็อกอินสำเร็จแล้ว: บัญชี `naruesorn141`, ทีม `naruesorn-wattanapipats-projects` (Hobby)
+- ตรวจแล้วไม่มีโปรเจกต์ `bank-resume` ในทีมนี้ เตรียมสร้างโปรเจกต์ใหม่และ deploy production โดยใช้โดเมนที่ Vercel จัดสรร
+- ผู้ใช้อนุมัติ R0 แล้วด้วยข้อความ “อนุมัติ” ก่อน deploy production
+- สร้างและ deploy `bank-resume` สำเร็จแล้วในทีม `naruesorn-wattanapipats-projects`
+- การเผยแพร่ production เป็น R0: ต้องตรวจบัญชี/ปลายทางและขออนุมัติทันที ก่อนเผยแพร่ ตาม Global AGENTS.md ของผู้ใช้
+
+## Production deployment
+
+- URL: https://bank-resume-sigma.vercel.app
+- Dashboard: https://vercel.com/naruesorn-wattanapipats-projects/bank-resume
+- Deployment ID: `dpl_ErzzymR2L7fFRdBHebfb1wQQfYfQ` — READY, production
+- Vercel เชื่อม GitHub `Naruesorn141/bank-resume` ระหว่างสร้างโปรเจกต์
+- Deploy จากไฟล์ปัจจุบันใน workspace รวมวันที่งานที่แก้ล่าสุดในไฟล์ (`Aug 2026 — Present` และ `Aug 2025 — Aug 2026`)
+- ตรวจ URL จริงแบบไม่ล็อกอิน: HTTP 200, ประสบการณ์ 5 รายการ, สลับภาษา, หน้าจอมือถือ และ PDF ผ่าน ไม่มี browser errors
+- เอกสารสถานะนี้บันทึกในเครื่องหลัง deploy ยังไม่ได้ commit/push
+
+## อัปเดตรายละเอียดโปรเจกต์ CRM และ Rental Demo
+
+- R2: ผู้ใช้ขอแก้รายละเอียด Koala’s March และ Impact Family เป็นระบบ CRM ที่เชื่อมต่อ LINE OA ทั้งสองภาษา
+- เพิ่ม Rental Demo เป็นโปรเจกต์ทดลองเช่าสินค้าและบริการ พร้อมลิงก์ https://rental-test-five.vercel.app/
+- ข้อมูลนี้มาจากผู้ใช้ ไม่ได้เพิ่มรายละเอียดฟีเจอร์หรือเทคโนโลยีที่ยังไม่ได้ระบุ
+- แก้ไขเฉพาะเว็บ PDF ดาวน์โหลดเป็นต้นฉบับเดิม
+- รออนุมัติ R0 ก่อน deploy การแก้ไขชุดนี้ไปยัง Production

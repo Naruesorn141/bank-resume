@@ -78,9 +78,23 @@ export const projects: { name: string; description?: Localized; url?: string }[]
   {
     name: 'Koala’s March',
     description: {
-      th: 'LINE Official Account ของ Koala’s March',
-      en: 'LINE Official Account for Koala’s March.',
+      th: 'ระบบ CRM สำหรับ Koala’s March ที่เชื่อมต่อกับ LINE Official Account (LINE OA)',
+      en: 'A CRM system for Koala’s March integrated with LINE Official Account (LINE OA).',
     },
   },
-  { name: 'Impact Family' },
+  {
+    name: 'Impact Family',
+    description: {
+      th: 'ระบบ CRM สำหรับ Impact Family ที่เชื่อมต่อกับ LINE Official Account (LINE OA)',
+      en: 'A CRM system for Impact Family integrated with LINE Official Account (LINE OA).',
+    },
+  },
+  {
+    name: 'Rental Demo',
+    description: {
+      th: 'โปรเจกต์ทดลองระบบเช่าสินค้าและบริการ',
+      en: 'An experimental project for product and service rentals.',
+    },
+    url: 'https://rental-test-five.vercel.app/',
+  },
 ];
