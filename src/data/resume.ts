@@ -1,9 +1,21 @@
 export type Language = 'th' | 'en';
 export type Localized = Record<Language, string>;
-export const jobs: { company: string; role: string; dates: Localized; stack: string[]; details: Localized[] }[] = [
+export const jobs: { company: string; role: string; dates: Localized; current?: boolean; stack: string[]; details: Localized[] }[] = [
+  {
+    company: 'จรรโลงใจ', role: 'SQL Developer',
+    dates: { en: 'Aug 2026 — Present', th: 'ส.ค. 2026 —ปัจจุบัน' },
+    current: true,
+    stack: ['SQL', 'Stored Procedures', 'MES Reporting', 'Production Support'],
+    details: [
+      { en: 'Contracted through จรรโลงใจ as an outsourced SQL Developer, working onsite at WD Thailand in Bang Pa-in.', th: 'ทำงานในตำแหน่ง SQL Developer ภายใต้สัญญากับบริษัทจรรโลงใจ ในรูปแบบ Outsource โดยปฏิบัติงาน Onsite ที่ WD Thailand บางปะอิน' },
+      { en: 'Maintain reports generated from Manufacturing Execution System (MES) data and troubleshoot the stored procedures used to produce them.', th: 'ดูแลรายงานจากข้อมูลระบบ Manufacturing Execution System (MES) และแก้ไขปัญหา Stored Procedure ที่ใช้ในการสร้างรายงาน' },
+      { en: 'Investigate the root causes of missing report data and develop both short-term solutions and long-term fixes.', th: 'วิเคราะห์หาสาเหตุของข้อมูลที่ขาดหายในรายงาน พร้อมหาแนวทางแก้ไขทั้งระยะสั้นและระยะยาว' },
+      { en: 'Provide production support and help troubleshoot issues as they arise.', th: 'สนับสนุนงาน Production และช่วยตรวจสอบแก้ไขเมื่อเกิดปัญหา' },
+    ],
+  },
   {
     company: 'Synergy Global Network', role: 'Full Stack Developer',
-    dates: { en: 'Aug 2025 — Present', th: 'ส.ค. 2025 — ปัจจุบัน' },
+    dates: { en: 'Aug 2025 — Aug 2026', th: 'ส.ค. 2025 — ส.ค. 2026' },
     stack: ['TypeScript', 'Next.js', 'NestJS', 'SQL Server', 'Sequelize'],
     details: [
       { en: 'Developed and maintained full stack web applications using TypeScript, Next.js on the frontend, and NestJS on the backend.', th: 'พัฒนาและดูแลเว็บแอปพลิเคชันแบบ Full Stack ด้วย TypeScript โดยใช้ Next.js สำหรับ Frontend และ NestJS สำหรับ Backend' },
@@ -52,4 +64,23 @@ export const skillGroups = [
 export const activities = [
   { name: 'Thailand Digital Young Talent', description: { en: 'Selected participant in a national tech competition focusing on software innovation and system integration.', th: 'ได้รับคัดเลือกเข้าร่วมการแข่งขันเทคโนโลยีระดับประเทศที่เน้นนวัตกรรมซอฟต์แวร์และการเชื่อมต่อระบบ' } },
   { name: 'Global Capstone Design Camp', description: { en: 'Collaborated with international students to solve real-world industry problems using technology.', th: 'ร่วมงานกับนักศึกษานานาชาติเพื่อใช้เทคโนโลยีแก้ปัญหาจริงในภาคอุตสาหกรรม' } },
+];
+
+export const projects: { name: string; description?: Localized; url?: string }[] = [
+  {
+    name: 'BOI e-Visa',
+    description: {
+      th: 'ระบบ e-Visa สำหรับนักลงทุนชาวต่างชาติ',
+      en: 'An e-Visa system for foreign investors.',
+    },
+    url: 'https://visa.boi.go.th/',
+  },
+  {
+    name: 'Koala’s March',
+    description: {
+      th: 'LINE Official Account ของ Koala’s March',
+      en: 'LINE Official Account for Koala’s March.',
+    },
+  },
+  { name: 'Impact Family' },
 ];

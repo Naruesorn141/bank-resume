@@ -6,7 +6,7 @@ test('resume content, language switching, navigation, and contact links', async 
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'th');
   await expect(page.getByRole('heading', { name: 'ประสบการณ์ทำงาน' })).toBeVisible();
-  await expect(page.locator('.job')).toHaveCount(4);
+  await expect(page.locator('.job')).toHaveCount(5);
   await expect.poll(() => page.locator('.portrait-wrap img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
   await page.screenshot({ path: `/tmp/bank-resume-${testInfo.project.name}.jpg`, fullPage: true, quality: 65 });
   await page.getByRole('button', { name: 'English', exact: true }).click();
